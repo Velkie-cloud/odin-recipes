@@ -1,0 +1,63 @@
+body {
+  background-color:  rgb(170, 170, 193);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1 {
+  font-family: copperplate, Georgia, Verdana;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+/* The big container */
+.index-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* two equal columns */
+  gap: 0px; /* Space between the columns */
+  margin: 0 auto; /* Center the whole grid */
+  /* max-width: 800px; */
+}
+
+/* Left Container */
+.img-header-container {
+  justify-content: right;   /* Align the list container right */
+  padding: 0px;
+}
+
+/* Header Image */
+.img-header-container img {
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.3);
+  width: auto;
+  height: 400px;
+  margin: 0px;
+}
+
+/* Right Container */
+.index-list-container {
+  justify-content: left;   /* Align the list container left */
+}
+
+/* Index Recipe List */
+.index-list-container li {
+  text-align: left;
+  list-style: square;
+  margin: 0px;
+  width: 400px;         /* Fixed width helps alignment */
+  padding-left: 2px;
+/*
+  li { margin: 10px 0 }	---> Creates vertical spacing (like a line between them)
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+  border-left: 1px dashed red; ---> Show vertical axis as guide line 
+*/
+}
+
+/* Mobile-friendly layout */
+@media (max-width: 600px) {
+  .index-container {
+    grid-template-columns: 1fr; /* Stack into a single column */
+  }
+}

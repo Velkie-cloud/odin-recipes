@@ -1,3 +1,12 @@
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   background-color:  rgb(170, 170, 193);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -8,6 +17,7 @@ h1 {
   color: rgb(255, 255, 255);
   text-align: center;
   margin-bottom: 50px;
+  margin-top: 50px;
 }
 
 /* The big container */
@@ -16,13 +26,18 @@ h1 {
   grid-template-columns: 1fr 1fr; /* two equal columns */
   gap: 0px; /* Space between the columns */
   margin: 0 auto; /* Center the whole grid */
-  /* max-width: 800px; */
+}
+
+/* The container feature*/
+.index-container.feature {
+    border: 3px dashed rgb(117, 18, 117);
 }
 
 /* Left Container */
 .img-header-container {
   justify-content: right;   /* Align the list container right */
   padding: 0px;
+  max-width: 600px; /* improve browser's handling of small windows */
 }
 
 /* Header Image */
@@ -31,19 +46,21 @@ h1 {
   width: auto;
   height: 400px;
   margin: 0px;
+  vertical-align: top;
 }
 
 /* Right Container */
 .index-list-container {
   justify-content: left;   /* Align the list container left */
+  max-width: 600px; 
 }
 
 /* Index Recipe List */
 .index-list-container li {
   text-align: left;
   list-style: square;
-  margin: 0px;
-  width: 400px;         /* Fixed width helps alignment */
+  margin: 10px;
+  width: 800px;         /* Fixed width helps alignment */
   padding-left: 2px;
 /*
   li { margin: 10px 0 }	---> Creates vertical spacing (like a line between them)
